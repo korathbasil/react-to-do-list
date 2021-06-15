@@ -13,11 +13,10 @@ function App() {
   ]);
   return (
     <div className="app">
-      {/* <h2>dfdf</h2> */}
-      {/* {names.map((name) => (
-        <List name={name} />
-      ))} */}
-      <div className="app-container"></div>
+      <div className="app-container">
+        <div className="app-left"></div>
+        <div className="app-right"></div>
+      </div>
     </div>
   );
 }
