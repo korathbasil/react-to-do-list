@@ -12,10 +12,11 @@ function App() {
     "Albert",
   ]);
   return (
-    <div className="App">
-      {names.map((name) => (
+    <div className="app">
+      <h2>dfdf</h2>
+      {/* {names.map((name) => (
         <List name={name} />
-      ))}
+      ))} */}
     </div>
   );
 }
