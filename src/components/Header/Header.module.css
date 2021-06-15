@@ -1,8 +1,10 @@
 .header {
-  width: 100%;
+  width: calc(100% - 80px);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  top: 40px;
 }
 .img {
   width: 50px;
