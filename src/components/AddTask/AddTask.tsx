@@ -1,19 +1,28 @@
-import { useState } from "react";
+import { useState, useRef, RefObject } from "react";
 import styles from "./AddTask.module.css";
 
 interface addTaskProps {
   addTask: (task: string) => void;
 }
 
-const AddTask: React.FC<addTaskProps> = (props) => {
+const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
+  const submitButttonRef = useRef<HTMLButtonElement>(null);
   const [task, setTask] = useState("");
+
+  const formSubmitHandler = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    addTask(task);
+    setTask("");
+  };
+
   return (
-    <div className={styles.addTask}>
+    <form className={styles.addTask} onSubmit={formSubmitHandler}>
       <div className={styles.inputContainer}>
         <input
           type="text"
           value={task}
           onChange={(e) => setTask(e.target.value)}
+          placeholder="Add task here..."
         />
       </div>
       <div className={styles.colorPicker}>
@@ -25,9 +34,17 @@ const AddTask: React.FC<addTaskProps> = (props) => {
         <div className={styles.colorCircle}></div>
       </div>
       <div className={styles.action}>
-        <button onClick={() => props.addTask(task)}>Add</button>
+        <button hidden type="submit" ref={submitButttonRef}>
+          Add
+        </button>
+        <div
+          className={styles.button}
+          onClick={() => submitButttonRef.current?.click()}
+        >
+          Add
+        </div>
       </div>
-    </div>
+    </form>
   );
 };
 

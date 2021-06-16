@@ -11,12 +11,18 @@
 }
 .inputContainer > input {
   width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  background-color: lightgray;
 }
 .colorPicker {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding: 5px;
+  padding: 20px;
 }
 .colorCircle {
   width: 20px;
@@ -29,7 +35,14 @@
   display: flex;
   flex-direction: row-reverse;
 }
-
+.button {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  color: black;
+  background-color: lightgray;
+  cursor: pointer;
+}
 /* Grads
 
 Blue => background: linear-gradient(135deg, rgba(10,176,163,1) 0%, rgba(0,22,255,1) 100%);

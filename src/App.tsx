@@ -4,7 +4,6 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import AddTask from "./components/AddTask/AddTask";
 import TaskCard from "./components/TaskCard/TaskCard";
-import List from "./components/List/List";
 
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<string[]>([]);
