@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import AddTask from "./components/AddTask/AddTask";
-import TaskView from "./components/TaskView/TaskView";
+import TaskCard from "./components/TaskCard/TaskCard";
 import List from "./components/List/List";
 
 const App: React.FC = () => {
@@ -21,7 +21,9 @@ const App: React.FC = () => {
           <AddTask addTask={addTask} />
         </div>
         <div className="app-right">
-          <TaskView tasks={tasks} />
+          {tasks.map((task) => (
+            <TaskCard task={task} />
+          ))}
         </div>
       </div>
     </div>
