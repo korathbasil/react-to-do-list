@@ -12,6 +12,12 @@ const App: React.FC = () => {
   const addTask = (task: Task) => {
     setTasks([...tasks, task]);
   };
+  const deleteTask = (id: string) => {
+    const newTasks = tasks.filter((task) => {
+      return task.id !== id;
+    });
+    setTasks(newTasks);
+  };
 
   return (
     <div className="app">
@@ -22,7 +28,7 @@ const App: React.FC = () => {
         </div>
         <div className="app-right">
           {tasks.map((task) => (
-            <TaskCard task={task} />
+            <TaskCard key={task.id} task={task} deleteTask={deleteTask} />
           ))}
         </div>
       </div>

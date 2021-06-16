@@ -4,7 +4,24 @@
   background-color: red;
   border-radius: 10px;
   margin-bottom: 15px;
+  box-shadow: 2px 2px 30px #0000004d, -1px -1px 2px #ffffff52;
 }
 .task > h3 {
   color: white;
+  margin-bottom: 10px;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.actionButton {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  color: black;
+  background-color: lightgray;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-left: 10px;
 }

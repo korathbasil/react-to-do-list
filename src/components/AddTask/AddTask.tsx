@@ -18,9 +18,14 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
   );
 
   const formSubmitHandler = (e: React.SyntheticEvent) => {
+    const date = new Date().toISOString();
     e.preventDefault();
     if (task !== "") {
-      addTask({ taskText: task, cardColor: selectedColor });
+      addTask({
+        id: date,
+        taskText: task,
+        cardColor: selectedColor,
+      });
       setTask("");
     }
   };
@@ -61,7 +66,7 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
                   addTaskRef.current.style.background =
                     "linear-gradient(135deg, rgba(43,207,94,1) 0%, rgba(8,88,48,1) 100%)";
                   setSelectedColor(
-                    "linear-gradient(135deg, rgba(135deg, rgba(43,207,94,1) 0%, rgba(8,88,48,1) 100%)"
+                    "linear-gradient(135deg, rgba(43,207,94,1) 0%, rgba(8,88,48,1) 100%)"
                   );
                 }
               }}
