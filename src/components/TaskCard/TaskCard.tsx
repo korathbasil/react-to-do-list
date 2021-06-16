@@ -21,7 +21,8 @@ const TaskCard: React.FC<taskProps> = ({ task, completeTask, deleteTask }) => {
         {!task.isCompleted && (
           <button
             onClick={() => completeTask(task.id)}
-            className={styles.actionButton}
+            className={styles.actionButton + " firstButton"}
+            style={{ backgroundColor: "green" }}
           >
             Mark as Complete
           </button>
@@ -29,6 +30,7 @@ const TaskCard: React.FC<taskProps> = ({ task, completeTask, deleteTask }) => {
         <button
           onClick={() => deleteTask(task.id)}
           className={styles.actionButton}
+          style={{ backgroundColor: "red" }}
         >
           Delete
         </button>

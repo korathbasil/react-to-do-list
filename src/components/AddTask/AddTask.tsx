@@ -109,15 +109,15 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
             ></div>
             <div className={styles.colorCircle}></div>
           </div>
-          <button hidden type="submit" ref={submitButttonRef}>
+          <button type="submit" ref={submitButttonRef}>
             Add
           </button>
-          <div
+          {/* <div
             className={styles.button}
             onClick={() => submitButttonRef.current?.click()}
           >
             Add
-          </div>
+          </div> */}
         </div>
       </form>
     </div>

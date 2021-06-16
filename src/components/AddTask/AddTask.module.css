@@ -86,13 +86,19 @@
     rgba(105, 16, 99, 1) 100%
   );
 }
-.button {
+.colorsAndAction > button {
   padding: 10px;
   border-radius: 10px;
   outline: none;
   color: black;
   background-color: lightgray;
   cursor: pointer;
+  border: none;
+  border-radius: 5;
+  background-color: white;
+  color: blue;
+  font-size: 16px;
+  font-weight: 600;
 }
 /* Grads
 
