@@ -19,10 +19,6 @@ const App: React.FC = () => {
     setTasks(newTasks);
   };
   const completeTask = (id: string) => {
-    // tasks.forEach((task) => {
-    //   if (task.id === id) task.isCompleted = true;
-    // });
-    // console.log(tasks);
     const newTasks = tasks.map((task) => {
       if (task.id === id) {
         task.isCompleted = true;

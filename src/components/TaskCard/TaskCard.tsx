@@ -14,7 +14,9 @@ const TaskCard: React.FC<taskProps> = ({ task, completeTask, deleteTask }) => {
       style={{ background: task.isCompleted ? "" : task.cardColor }}
       className={styles.task}
     >
-      <h3>{task.taskText}</h3>
+      <h3 style={{ textDecoration: task.isCompleted ? "line-through" : "" }}>
+        {task.taskText}
+      </h3>
       <div className={styles.actions}>
         {!task.isCompleted && (
           <button
