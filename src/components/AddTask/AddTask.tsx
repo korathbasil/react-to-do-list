@@ -25,11 +25,11 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
         id: date,
         taskText: task,
         cardColor: selectedColor,
+        isCompleted: false,
       });
       setTask("");
     }
   };
-  const form = document.querySelector(".addTask") as HTMLFormElement;
 
   return (
     <div className={styles.addTask} ref={addTaskRef}>

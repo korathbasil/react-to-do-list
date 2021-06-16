@@ -18,6 +18,20 @@ const App: React.FC = () => {
     });
     setTasks(newTasks);
   };
+  const completeTask = (id: string) => {
+    // tasks.forEach((task) => {
+    //   if (task.id === id) task.isCompleted = true;
+    // });
+    // console.log(tasks);
+    const newTasks = tasks.map((task) => {
+      if (task.id === id) {
+        task.isCompleted = true;
+        return task;
+      }
+      return task;
+    });
+    setTasks(newTasks);
+  };
 
   return (
     <div className="app">
@@ -28,7 +42,12 @@ const App: React.FC = () => {
         </div>
         <div className="app-right">
           {tasks.map((task) => (
-            <TaskCard key={task.id} task={task} deleteTask={deleteTask} />
+            <TaskCard
+              key={task.id}
+              task={task}
+              completeTask={completeTask}
+              deleteTask={deleteTask}
+            />
           ))}
         </div>
       </div>
