@@ -5,3 +5,6 @@
   border-radius: 10px;
   margin-bottom: 15px;
 }
+.task > h3 {
+  color: white;
+}
