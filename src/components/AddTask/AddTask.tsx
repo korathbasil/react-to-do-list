@@ -1,20 +1,25 @@
 import { useState, useRef } from "react";
-import styles from "./AddTask.module.css";
 
+import styles from "./AddTask.module.css";
 import ClearIcon from "../../assets/clear-icon-outlined.png";
+import { Task } from "../../models";
 
 interface addTaskProps {
-  addTask: (task: string) => void;
+  addTask: (task: Task) => void;
 }
 
 const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
   const submitButttonRef = useRef<HTMLButtonElement>(null);
   const addTaskRef = useRef<HTMLDivElement>(null);
+
   const [task, setTask] = useState("");
+  const [selectedColor, setSelectedColor] = useState(
+    "linear-gradient(135deg, rgba(10,176,163,1) 0%, rgba(0,22,255,1) 100%)"
+  );
 
   const formSubmitHandler = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    addTask(task);
+    addTask({ taskText: task, cardColor: selectedColor });
     setTask("");
   };
   const form = document.querySelector(".addTask") as HTMLFormElement;
@@ -26,7 +31,9 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
           <input
             type="text"
             value={task}
-            onChange={(e) => {}}
+            onChange={(e) => {
+              setTask(e.target.value);
+            }}
             placeholder="Add task here..."
           />
           <img src={ClearIcon} alt="" onClick={() => setTask("")} />
@@ -38,6 +45,9 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
               if (addTaskRef.current !== null) {
                 addTaskRef.current.style.background =
                   "linear-gradient(135deg, rgba(10,176,163,1) 0%, rgba(0,22,255,1) 100%)";
+                setSelectedColor(
+                  "linear-gradient(135deg, rgba(10,176,163,1) 0%, rgba(0,22,255,1) 100%)"
+                );
               }
             }}
           ></div>
@@ -47,6 +57,9 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
               if (addTaskRef.current !== null) {
                 addTaskRef.current.style.background =
                   "linear-gradient(135deg, rgba(43,207,94,1) 0%, rgba(8,88,48,1) 100%)";
+                setSelectedColor(
+                  "linear-gradient(135deg, rgba(135deg, rgba(43,207,94,1) 0%, rgba(8,88,48,1) 100%)"
+                );
               }
             }}
           ></div>
@@ -56,6 +69,9 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
               if (addTaskRef.current !== null) {
                 addTaskRef.current.style.background =
                   "linear-gradient(135deg, rgba(238,57,57,1) 0%, rgba(88,8,8,1) 100%)";
+                setSelectedColor(
+                  "linear-gradient(135deg, rgba(238,57,57,1) 0%, rgba(88,8,8,1) 100%)"
+                );
               }
             }}
           ></div>
@@ -65,6 +81,9 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
               if (addTaskRef.current !== null) {
                 addTaskRef.current.style.background =
                   "linear-gradient(135deg, rgba(197,238,57,1) 0%, rgba(92,105,16,1) 100%)";
+                setSelectedColor(
+                  "linear-gradient(135deg, rgba(197,238,57,1) 0%, rgba(92,105,16,1) 100%)"
+                );
               }
             }}
           ></div>
@@ -74,6 +93,9 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
               if (addTaskRef.current !== null) {
                 addTaskRef.current.style.background =
                   "linear-gradient(135deg, rgba(226,85,185,1) 0%, rgba(105,16,99,1) 100%)";
+                setSelectedColor(
+                  "linear-gradient(135deg, rgba(226,85,185,1) 0%, rgba(105,16,99,1) 100%)"
+                );
               }
             }}
           ></div>

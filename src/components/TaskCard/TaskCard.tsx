@@ -1,9 +1,15 @@
 import styles from "./TaskCard.module.css";
 
-const TaskCard: React.FC<{ task: string }> = ({ task }) => {
+import { Task } from "../../models";
+
+interface taskProps {
+  task: Task;
+}
+
+const TaskCard: React.FC<taskProps> = ({ task }) => {
   return (
-    <div className={styles.task}>
-      <h3>{task}</h3>
+    <div style={{ background: task.cardColor }} className={styles.task}>
+      <h3>{task.taskText}</h3>
       <div className={styles.actions}>
         <button className={styles.actionButton}>Mark as Complete</button>
         <button className={styles.actionButton}>Delete</button>

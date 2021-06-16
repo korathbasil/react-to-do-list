@@ -4,11 +4,12 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import AddTask from "./components/AddTask/AddTask";
 import TaskCard from "./components/TaskCard/TaskCard";
+import { Task } from "./models";
 
 const App: React.FC = () => {
-  const [tasks, setTasks] = useState<string[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
 
-  const addTask = (task: string) => {
+  const addTask = (task: Task) => {
     setTasks([...tasks, task]);
   };
 
