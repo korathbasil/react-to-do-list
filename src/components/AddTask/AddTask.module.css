@@ -100,16 +100,10 @@
   font-size: 16px;
   font-weight: 600;
 }
-/* Grads
 
-Blue => background: linear-gradient(135deg, rgba(10,176,163,1) 0%, rgba(0,22,255,1) 100%);
-Green => background: linear-gradient(135deg, rgba(43,207,94,1) 0%, rgba(8,88,48,1) 100%);
-Red => background: linear-gradient(135deg, rgba(238,57,57,1) 0%, rgba(88,8,8,1) 100%);
-Yellow => background: linear-gradient(135deg, rgba(197,238,57,1) 0%, rgba(92,105,16,1) 100%);
-Purple => background: linear-gradient(135deg, rgba(226,85,185,1) 0%, rgba(105,16,99,1) 100%);
-
-
-
-
-
-*/
+@media (max-width: 700px) {
+  .addTask {
+    width: 100%;
+    flex-direction: column;
+  }
+}
