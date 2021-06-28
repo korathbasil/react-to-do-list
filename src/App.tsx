@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimatedList } from "react-animated-list";
 
 import "./App.css";
 import Header from "./components/Header/Header";
@@ -37,14 +38,16 @@ const App: React.FC = () => {
           <AddTask addTask={addTask} />
         </div>
         <div className="app-right">
-          {tasks.map((task) => (
-            <TaskCard
-              key={task.id}
-              task={task}
-              completeTask={completeTask}
-              deleteTask={deleteTask}
-            />
-          ))}
+          <AnimatedList animation={"grow"}>
+            {tasks.map((task) => (
+              <TaskCard
+                key={task.id}
+                task={task}
+                completeTask={completeTask}
+                deleteTask={deleteTask}
+              />
+            ))}
+          </AnimatedList>
         </div>
       </div>
     </div>
