@@ -1,6 +1,5 @@
-import styles from "./TaskCard.module.css";
-
 import { Task } from "../../models";
+import styles from "./TaskCard.module.css";
 
 interface taskProps {
   task: Task;
@@ -11,6 +10,7 @@ interface taskProps {
 const TaskCard: React.FC<taskProps> = ({ task, completeTask, deleteTask }) => {
   return (
     <div
+      key={task.id}
       style={{ background: task.isCompleted ? "" : task.cardColor }}
       className={styles.task}
     >

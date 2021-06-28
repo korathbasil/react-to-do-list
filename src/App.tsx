@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import FlipMove from "react-flip-move";
 
 import "./App.css";
 import Header from "./components/Header/Header";
@@ -39,14 +38,12 @@ const App: React.FC = () => {
         </div>
         <div className="app-right">
           {tasks.map((task) => (
-            <FlipMove>
-              <TaskCard
-                key={task.id}
-                task={task}
-                completeTask={completeTask}
-                deleteTask={deleteTask}
-              />
-            </FlipMove>
+            <TaskCard
+              key={task.id}
+              task={task}
+              completeTask={completeTask}
+              deleteTask={deleteTask}
+            />
           ))}
         </div>
       </div>
