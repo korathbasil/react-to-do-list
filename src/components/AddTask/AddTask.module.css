@@ -44,8 +44,8 @@
   align-items: center;
 }
 .colorCircle {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 999px;
   background-color: hotpink;
   cursor: pointer;
