@@ -49,6 +49,13 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
           <div className={styles.colorPicker}>
             <div
               className={styles.colorCircle}
+              style={{
+                border:
+                  selectedColor ===
+                  "linear-gradient(135deg, rgba(10,176,163,1) 0%, rgba(0,22,255,1) 100%)"
+                    ? "2px solid white"
+                    : "none",
+              }}
               onClick={() => {
                 if (addTaskRef.current !== null) {
                   addTaskRef.current.style.background =
@@ -61,6 +68,13 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
             ></div>
             <div
               className={styles.colorCircle}
+              style={{
+                border:
+                  selectedColor ===
+                  "linear-gradient(135deg, rgba(43,207,94,1) 0%, rgba(8,88,48,1) 100%)"
+                    ? "2px solid white"
+                    : "none",
+              }}
               onClick={() => {
                 if (addTaskRef.current !== null) {
                   addTaskRef.current.style.background =
@@ -73,6 +87,13 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
             ></div>
             <div
               className={styles.colorCircle}
+              style={{
+                border:
+                  selectedColor ===
+                  "linear-gradient(135deg, rgba(238,57,57,1) 0%, rgba(88,8,8,1) 100%)"
+                    ? "2px solid white"
+                    : "none",
+              }}
               onClick={() => {
                 if (addTaskRef.current !== null) {
                   addTaskRef.current.style.background =
@@ -85,6 +106,13 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
             ></div>
             <div
               className={styles.colorCircle}
+              style={{
+                border:
+                  selectedColor ===
+                  "linear-gradient(135deg, rgba(197,238,57,1) 0%, rgba(92,105,16,1) 100%)"
+                    ? "2px solid white"
+                    : "none",
+              }}
               onClick={() => {
                 if (addTaskRef.current !== null) {
                   addTaskRef.current.style.background =
@@ -97,6 +125,13 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
             ></div>
             <div
               className={styles.colorCircle}
+              style={{
+                border:
+                  selectedColor ===
+                  "linear-gradient(135deg, rgba(226,85,185,1) 0%, rgba(105,16,99,1) 100%)"
+                    ? "2px solid white"
+                    : "none",
+              }}
               onClick={() => {
                 if (addTaskRef.current !== null) {
                   addTaskRef.current.style.background =
@@ -107,7 +142,7 @@ const AddTask: React.FC<addTaskProps> = ({ addTask }) => {
                 }
               }}
             ></div>
-            <div className={styles.colorCircle}></div>
+            {/* <div className={styles.colorCircle}></div> */}
           </div>
           <button type="submit" ref={submitButttonRef}>
             Add

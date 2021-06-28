@@ -15,6 +15,7 @@
 .app-container {
   width: 70%;
   height: 80%;
+  max-height: 80%;
   /* background-color: aqua; */
   background: linear-gradient(
     90deg,
@@ -40,9 +41,9 @@
 }
 .app-right {
   width: 50%;
-  height: 100%;
+  max-height: 500px;
   padding: 40px;
   padding-left: 20px;
-  /* background-color: hotpink; */
-  /* overflow-y: scroll; */
+  background-color: hotpink;
+  overflow: scroll;
 }
