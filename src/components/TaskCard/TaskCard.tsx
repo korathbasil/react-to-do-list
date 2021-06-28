@@ -20,7 +20,9 @@ const TaskCard: React.FC<taskProps> = ({ task, completeTask, deleteTask }) => {
       <div className={styles.actions}>
         {!task.isCompleted && (
           <button
-            onClick={() => completeTask(task.id)}
+            onClick={() => {
+              completeTask(task.id);
+            }}
             className={styles.actionButton + " firstButton"}
             style={{ backgroundColor: "green" }}
           >
