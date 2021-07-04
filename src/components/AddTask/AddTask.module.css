@@ -31,6 +31,7 @@
 }
 .inputContainer > img {
   margin-right: 10px;
+  cursor: pointer;
 }
 .colorsAndAction {
   display: flex;
